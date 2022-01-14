@@ -1,5 +1,5 @@
 import { React, Component } from 'react';
-import styles from './CardComponent.module.css'
+/*import styles from './CardComponent.module.css'*/
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
