@@ -3,8 +3,32 @@ import { React, Component } from 'react';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
-
 export default class CardComponent extends Component {
+    constructor(props) {
+        super(props);
+
+        // Este enlace es necesario para hacer que `this` funcione en el callback
+        this.copy = this.copy.bind(this);
+        this.copyToClip = this.copyFormated.bind(this);
+    }
+
+    copy(id) {
+        //get element
+        let element = document.getElementById("" + id).innerHTML;
+        this.copyFormated(element);
+    }
+
+    copyFormated(str) {
+        function listener(e) {
+            e.clipboardData.setData("text/html", str);
+            e.clipboardData.setData("text/plain", str);
+            e.preventDefault();
+        }
+        document.addEventListener("copy", listener);
+        document.execCommand("copy");
+        document.removeEventListener("copy", listener);
+    }
+
     render() {
         return (
             <Card>
@@ -14,13 +38,19 @@ export default class CardComponent extends Component {
                     <Card.Text>
                         sdfsdf
                     </Card.Text>*/}
-                    <div className="copyContainer">
-                        <p> <b>cograts</b> copied this<br></br>succesfully</p>
+                    <div className="copyContainer" id={this.props.cardId}>
+                        {this.props.innerContent}
                     </div>
                     <hr></hr>
-                    <Button variant="primary">Go somewhere</Button>
+
+
+
+
+                    <Button variant="primary" onClick={this.copy.bind(this.e, this.props.cardId)}>Copy this signature</Button>
                 </Card.Body>
             </Card>
         )
     }
 }
+
+
