@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+//Custom components
+import Navbar from "./components/Navbar/Navbar"
+import Card from "./components/Card/Card"
+//Boostrap most used components
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar></Navbar>
+
+
+
+      <Container className="pt-5">
+        <Row className="">
+          <Col><Card cardName="Just Text"></Card></Col>
+          <Col><Card cardName="Just Text"></Card></Col>
+        </Row>
+        <Row className="pt-4">
+          <Col><Card cardName="Just Text"></Card></Col>
+          <Col><Card cardName="Just Text"></Card></Col>
+        </Row>
+      </Container>
+
+
     </div>
   );
 }
