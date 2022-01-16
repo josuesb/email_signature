@@ -61,7 +61,7 @@ function SignatureTemplate(props) {
             return <table>
                 <tbody><tr>
                     <td style={{ borderRight: '2px solid rgba(69,102,142,0.5)', paddingRight: '10px' }}>
-                        <img src="https://d36urhup7zbd7q.cloudfront.net/1527c31a-089c-40e0-a14d-11e3711c9133/Intersection1.format_png.resize_200x.png" width={65} height={65} alt="logotype" style={{ borderRadius: 0, width: '65px', height: '65px', maxWidth: '120px' }} />
+                        <img src="https://ci6.googleusercontent.com/proxy/36gWHxTeUQNCuj7D_l9e_G-XBl5j2ppIoMowpAiqMO1NrlSU5Y9NUHjo-Mj6GEyQuGgRlsoJUlar_W-NH8iToaJEOYimN2-9XR6llgtS3232ksQSy7V-UKpw9K3hL7pJNHNpq0BH-EQ-3p3TiMNnN3BZm6k8YgQ1g9q-ETdyYeLwL42Ev_w=s0-d-e1-ft#https://d36urhup7zbd7q.cloudfront.net/1527c31a-089c-40e0-a14d-11e3711c9133/Intersection1.format_png.resize_200x.png" width={65} height={65} alt="logotype" style={{ borderRadius: 0, width: '65px', height: '65px', maxWidth: '120px' }} />
                     </td>
                     <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 10px' }}>
                         <span style={{ color: '#0b5394' }} size={4}><b>{props.name}</b></span>
@@ -116,10 +116,6 @@ export default class CardComponent extends Component {
                         <SignatureTemplate index={this.props.innerContentIndex} name={this.props.name} role={this.props.role} phone={this.props.phone} url={this.props.url}></SignatureTemplate>
                     </div>
                     <hr></hr>
-
-
-
-
                     <Button variant="primary" onClick={this.copy.bind(this.e, this.props.cardId)}>Copy this signature</Button>
                 </Card.Body>
             </Card>

@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
+import Accordion from 'react-bootstrap/Accordion'
 
 
 
@@ -69,39 +70,51 @@ class App extends Component {
 
         <Navbar></Navbar>
         <Container className="pt-5">
-          <Row>
-            <Col>
-              <Form.Group className="mb-3" controlId="name">
-                <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter your name" onChange={this.updateName} />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group className="mb-3" controlId="role">
-                <Form.Label>Role</Form.Label>
-                <Form.Control type="text" placeholder="Enter your name" onChange={this.updateRole} />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group className="mb-3" controlId="phone">
-                <Form.Label>Phone</Form.Label>
-                <Form.Control type="text" placeholder="Enter your name" onChange={this.updatePhone} />
-              </Form.Group>
-              <Form.Text id="passwordHelpBlock" muted>
-                Phone numbers must be added in an international format.
-              </Form.Text>
-            </Col>
-            <Col>
-              <Form.Group className="mb-3" controlId="phone">
-                <Form.Label>Website</Form.Label>
-                <Form.Control type="text" placeholder="Enter your website URL" onChange={this.updateURL} />
-              </Form.Group>
-              <Form.Text id="passwordHelpBlock" muted>
-                Please include the full URL of your website, including protocols like https.
-              </Form.Text>
-            </Col>
+          <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Showing email signatures for&nbsp;<b>{this.state.name}, {this.state.role}</b>. Open this section to change the configuration</Accordion.Header>
+              <Accordion.Body>
+                <Row>
+                  <Col>
+                    <Form.Group className="mb-3" controlId="name">
+                      <Form.Label>Name</Form.Label>
+                      <Form.Control type="text" placeholder="Enter your name" onChange={this.updateName} />
+                    </Form.Group>
+                  </Col>
+                  <Col>
+                    <Form.Group className="mb-3" controlId="role">
+                      <Form.Label>Role</Form.Label>
+                      <Form.Control type="text" placeholder="Enter your name" onChange={this.updateRole} />
+                    </Form.Group>
+                  </Col>
+                  <Col>
+                    <Form.Group className="mb-3" controlId="phone">
+                      <Form.Label>Phone</Form.Label>
+                      <Form.Control type="text" placeholder="Enter your name" onChange={this.updatePhone} />
+                    </Form.Group>
+                    <Form.Text id="passwordHelpBlock" muted>
+                      Phone numbers must be added in an international format.
+                    </Form.Text>
+                  </Col>
+                  <Col>
+                    <Form.Group className="mb-3" controlId="phone">
+                      <Form.Label>Website</Form.Label>
+                      <Form.Control type="text" placeholder="Enter your website URL" onChange={this.updateURL} />
+                    </Form.Group>
+                    <Form.Text id="passwordHelpBlock" muted>
+                      Please include the full URL of your website, including protocols like https.
+                    </Form.Text>
+                  </Col>
+                </Row>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
 
-          </Row>
+
+
+
+
+
 
 
 
