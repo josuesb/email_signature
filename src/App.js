@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 //Custom components
 import Navbar from "./components/Navbar/Navbar"
 import Card from "./components/Card/Card"
@@ -8,8 +8,22 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Accordion from 'react-bootstrap/Accordion'
+import Alert from 'react-bootstrap/Alert'
+import Button from 'react-bootstrap/Button'
 
+function AlertDismissible() {
+  const [show, setShow] = useState(true);
 
+  if (show) {
+    return (
+      <Alert key={"idx"} variant={"info"} onClose={() => setShow(false)} dismissible>
+        Wondering how to setup your email signature? Please refer to this{' '}
+        <Alert.Link href="#">quick guide</Alert.Link> and <Alert.Link href="#">reach out if you have any questions</Alert.Link>.
+      </Alert>
+    );
+  }
+  return <></>;
+}
 
 
 class App extends Component {
@@ -21,7 +35,8 @@ class App extends Component {
       name: 'John Smith',
       role: 'Developer',
       phone: '(+506) 8888-8888',
-      url: 'josuesb.com'
+      url: 'josuesb.com',
+      showAlert: true
     }
 
     // Binding this keyword
@@ -67,9 +82,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <Navbar></Navbar>
-        <Container className="pt-5">
+        <Container className="pt-3">
+          <h1 className="text-center">Email Signature formater</h1>
+          <AlertDismissible></AlertDismissible>
           <Accordion>
             <Accordion.Item eventKey="0">
               <Accordion.Header>Showing email signatures for&nbsp;<b>{this.state.name}, {this.state.role}</b>. Open this section to change the configuration</Accordion.Header>
@@ -127,7 +143,7 @@ class App extends Component {
             <Col><Card cardName="Phone number and website" cardId="copy3" innerContentIndex={2} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
             <Col><Card cardName="Simple" cardId="copy4" innerContentIndex={3} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
           </Row>
-          {/**ADDED TO TEST SCROLL - START *}
+          {/**ADDED TO TEST SCROLL - START */}
           <Row className="pt-4">
             <Col><Card cardName="Phone number and website" cardId="copy3" innerContentIndex={2} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
             <Col><Card cardName="Simple" cardId="copy4" innerContentIndex={3} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>

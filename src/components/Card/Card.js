@@ -1,5 +1,5 @@
 import { React, Component } from 'react';
-/*import styles from './CardComponent.module.css'*/
+import styles from './Card.module.css'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
@@ -105,7 +105,10 @@ export default class CardComponent extends Component {
     render() {
         return (
             <Card>
-                <Card.Header as="h5">{this.props.cardName}</Card.Header>
+                <Card.Header>
+                    {this.props.cardName}
+                    <Button className={styles.floatButtonRight} variant="primary" onClick={this.copy.bind(this.e, this.props.cardId)}>Copy this signature</Button>
+                </Card.Header>
                 <Card.Body>
                     {/*<Card.Title>Special title treatment</Card.Title>
                     <Card.Text>
@@ -115,10 +118,9 @@ export default class CardComponent extends Component {
                         {/*this.signatureTemplate.bind(this.props.innerContentIndex)*/}
                         <SignatureTemplate index={this.props.innerContentIndex} name={this.props.name} role={this.props.role} phone={this.props.phone} url={this.props.url}></SignatureTemplate>
                     </div>
-                    <hr></hr>
-                    <Button variant="primary" onClick={this.copy.bind(this.e, this.props.cardId)}>Copy this signature</Button>
+
                 </Card.Body>
-            </Card>
+            </Card >
         )
     }
 }
