@@ -84,8 +84,10 @@ class App extends Component {
         <Navbar></Navbar>
         <Container className="pt-3">
           <h1 className="text-center">Email Signature formater</h1>
+          {/*}
           <AlertDismissible></AlertDismissible>
-          <Accordion>
+    {*/}
+          <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="0">
               <Accordion.Header>Showing email signatures for&nbsp;<b>{this.state.name}, {this.state.role}</b>. Open this section to change the configuration</Accordion.Header>
               <Accordion.Body>
