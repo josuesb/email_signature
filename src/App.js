@@ -1,4 +1,5 @@
-import React, { Component, useState } from 'react'
+//import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 //Custom components
 import Navbar from "./components/Navbar/Navbar"
 import Card from "./components/Card/Card"
@@ -8,7 +9,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Accordion from 'react-bootstrap/Accordion'
-import Alert from 'react-bootstrap/Alert'
+//import Alert from 'react-bootstrap/Alert'
 /*
 function AlertDismissible() {
   const [show, setShow] = useState(true);
