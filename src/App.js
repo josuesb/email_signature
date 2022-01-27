@@ -88,7 +88,7 @@ class App extends Component {
           {/*}
           <AlertDismissible></AlertDismissible>
     {*/}
-          <Accordion defaultActiveKey="0">
+          <Accordion > {/*defaultActiveKey="0"*/}
             <Accordion.Item eventKey="0">
               <Accordion.Header>Showing email signatures for&nbsp;<b>{this.state.name}, {this.state.role}</b>. Open this section to change the configuration</Accordion.Header>
               <Accordion.Body>
@@ -129,12 +129,12 @@ class App extends Component {
           </Accordion>
           <br></br>
           <Row className="">
-            <Col><Card cardName="No website URL" cardId="copy1" innerContentIndex={0} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
-            <Col><Card cardName="No phone number" cardId="copy2" innerContentIndex={1} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
+            <Col><Card cardName={<span><b>1.</b> Simple image signature</span>} cardId="copy1" innerContentIndex={0} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
+            <Col><Card cardName={<span><b>2.</b> Complete image signature</span>} cardId="copy2" innerContentIndex={1} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
           </Row>
           <Row className="pt-4">
-            <Col><Card cardName="Phone number and website" cardId="copy3" innerContentIndex={2} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
-            <Col><Card cardName="Simple" cardId="copy4" innerContentIndex={3} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
+            <Col><Card cardName={<span><b>3.</b> Simple text signature</span>} cardId="copy3" innerContentIndex={2} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
+            <Col><Card cardName={<span><b>4.</b> Complete text signature</span>} cardId="copy4" innerContentIndex={3} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
           </Row>
           {/**ADDED TO TEST SCROLL - START *
           <Row className="pt-4">

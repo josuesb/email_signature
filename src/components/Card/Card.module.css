@@ -1,3 +1,7 @@
 .floatButtonRight {
     float: right;
 }
+
+.cardBodyContainter {
+    min-height: 60px!important;
+}

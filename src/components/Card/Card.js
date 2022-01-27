@@ -113,11 +113,12 @@ export default class CardComponent extends Component {
                     <Card.Text>
                         sdfsdf
                     </Card.Text>*/}
-                    <div className="copyContainer" id={this.props.cardId}>
-                        {/*this.signatureTemplate.bind(this.props.innerContentIndex)*/}
-                        <SignatureTemplate index={this.props.innerContentIndex} name={this.props.name} role={this.props.role} phone={this.props.phone} url={this.props.url}></SignatureTemplate>
+                    <div className={styles.cardBodyContainter}>
+                        <div className="copyContainer" id={this.props.cardId}>
+                            {/*this.signatureTemplate.bind(this.props.innerContentIndex)*/}
+                            <SignatureTemplate index={this.props.innerContentIndex} name={this.props.name} role={this.props.role} phone={this.props.phone} url={this.props.url}></SignatureTemplate>
+                        </div>
                     </div>
-
                 </Card.Body>
             </Card >
         )
