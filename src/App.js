@@ -1,4 +1,5 @@
-import React, { Component, useState } from 'react'
+//import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 //Custom components
 import Navbar from "./components/Navbar/Navbar"
 import Card from "./components/Card/Card"
@@ -8,8 +9,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Accordion from 'react-bootstrap/Accordion'
-import Alert from 'react-bootstrap/Alert'
-
+//import Alert from 'react-bootstrap/Alert'
+/*
 function AlertDismissible() {
   const [show, setShow] = useState(true);
 
@@ -22,7 +23,7 @@ function AlertDismissible() {
     );
   }
   return <></>;
-}
+}*/
 
 
 class App extends Component {
@@ -84,8 +85,10 @@ class App extends Component {
         <Navbar></Navbar>
         <Container className="pt-3">
           <h1 className="text-center">Email Signature formater</h1>
+          {/*}
           <AlertDismissible></AlertDismissible>
-          <Accordion>
+    {*/}
+          <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="0">
               <Accordion.Header>Showing email signatures for&nbsp;<b>{this.state.name}, {this.state.role}</b>. Open this section to change the configuration</Accordion.Header>
               <Accordion.Body>
