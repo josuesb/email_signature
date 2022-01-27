@@ -14,9 +14,9 @@ function SignatureTemplate(props) {
                     <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 13px' }}>
                         <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.name}</span>
                         <br />
-                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.role}, <a style={{ color: "#15c" }} href="https://firstfactory.com/" target="_blank">First Factory, Inc.</a></span>
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.role}, <a style={{ color: "#15c" }} href="https://firstfactory.com/" target="_blank" rel="noreferrer">First Factory, Inc.</a></span>
                         <br />
-                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.phone} | <a style={{ color: "#15c" }} href="https://calendly.com/firstfactory" target="_blank">Book some time</a></span>
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.phone} | <a style={{ color: "#15c" }} href="https://calendly.com/firstfactory" target="_blank" rel="noreferrer">Book some time</a></span>
 
                     </td>
                 </tr>
