@@ -15,9 +15,7 @@ function SignatureTemplate(props) {
                         <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.name}</span>
                         <br />
                         <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.role}, <a style={{ color: "#15c" }} href="https://firstfactory.com/" target="_blank" rel="noreferrer">First Factory, Inc.</a></span>
-                        <br />
-                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.phone} | <a style={{ color: "#15c" }} href="https://calendly.com/firstfactory" target="_blank" rel="noreferrer">Book some time</a></span>
-
+                       
                     </td>
                 </tr>
                 </tbody>
@@ -26,15 +24,16 @@ function SignatureTemplate(props) {
         case 1:
             return <table>
                 <tbody><tr>
-                    <td style={{ borderRight: '2px solid rgba(69,102,142,0.5)', paddingRight: '10px' }}>
-                        <img src="https://d36urhup7zbd7q.cloudfront.net/1527c31a-089c-40e0-a14d-11e3711c9133/Intersection1.format_png.resize_200x.png" width={65} height={65} alt="logotype" style={{ borderRadius: 0, width: '65px', height: '65px', maxWidth: '120px' }} />
+                    <td style={{ borderRight: '1px solid rgb(185,185,185)', paddingRight: '13px', paddingLeft: '4px' }}>
+                        <img src="https://firstfactory-assets.s3.amazonaws.com/FF_Logo_50px-03.png" width={55} height={55} alt="logotype" style={{ borderRadius: 0, width: '55px', height: '55px' }} />
                     </td>
-                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 10px' }}>
-                        <span style={{ color: '#0b5394' }} size={4}><b>{props.name}</b></span>
+                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 13px' }}>
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.name}</span>
                         <br />
-                        <span style={{ color: '#444444', fontSize: '12px' }}>{props.role}</span><br /><br />
-                        <a href={"" + props.url} style={{ fontFamily: 'Arial' }} target="_blank" rel="noreferrer">
-                            <span style={{ color: '#444444', fontSize: '12px' }}>{props.url}</span></a>
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.role}, <a style={{ color: "#15c" }} href="https://firstfactory.com/" target="_blank" rel="noreferrer">First Factory, Inc.</a></span>
+                        <br />
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.phone} | <a style={{ color: "#15c" }} href="https://calendly.com/firstfactory" target="_blank" rel="noreferrer">Book some time</a></span>
+
                     </td>
                 </tr>
                 </tbody>
@@ -43,32 +42,31 @@ function SignatureTemplate(props) {
         case 2:
             return <table>
                 <tbody><tr>
-                    <td style={{ borderRight: '2px solid rgba(69,102,142,0.5)', paddingRight: '10px' }}>
-                        <img src="https://d36urhup7zbd7q.cloudfront.net/1527c31a-089c-40e0-a14d-11e3711c9133/Intersection1.format_png.resize_200x.png" width={65} height={65} alt="logotype" style={{ borderRadius: 0, width: '65px', height: '65px', maxWidth: '120px' }} />
-                    </td>
-                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 10px' }}>
-                        <span style={{ color: '#0b5394' }} size={4}><b>{props.name}</b></span>
+                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 13px' }}>
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.name}</span>
                         <br />
-                        <span style={{ color: '#444444', fontSize: '12px' }}>{props.role}</span><br /><br />
-                        <a href={"" + props.url} style={{ fontFamily: 'Arial' }} target="_blank" rel="noreferrer">
-                            <span style={{ color: '#444444', fontSize: '12px' }}>{props.url}</span></a> | <a href={"tel:" + props.phone} style={{ fontFamily: 'Arial' }} target="_blank" rel="noreferrer">
-                            <span style={{ color: '#444444', fontSize: '12px' }}>{props.phone}</span></a>
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.role}, <a style={{ color: "#15c" }} href="https://firstfactory.com/" target="_blank" rel="noreferrer">First Factory, Inc.</a></span>
+                      
                     </td>
                 </tr>
                 </tbody>
             </table>;
 
         default:
+            let signatureSecondLine;
+            if (props.role.length>=20) 
+            signatureSecondLine=<span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.role}<br></br> <a style={{ color: "#15c" }} href="https://firstfactory.com/" target="_blank" rel="noreferrer">First Factory, Inc.</a></span>;
+            else
+            signatureSecondLine=<span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.role}, <a style={{ color: "#15c" }} href="https://firstfactory.com/" target="_blank" rel="noreferrer">First Factory, Inc.</a></span>;
+
             return <table>
                 <tbody><tr>
-                    <td style={{ borderRight: '2px solid rgba(69,102,142,0.5)', paddingRight: '10px' }}>
-                        <img src="https://ci6.googleusercontent.com/proxy/36gWHxTeUQNCuj7D_l9e_G-XBl5j2ppIoMowpAiqMO1NrlSU5Y9NUHjo-Mj6GEyQuGgRlsoJUlar_W-NH8iToaJEOYimN2-9XR6llgtS3232ksQSy7V-UKpw9K3hL7pJNHNpq0BH-EQ-3p3TiMNnN3BZm6k8YgQ1g9q-ETdyYeLwL42Ev_w=s0-d-e1-ft#https://d36urhup7zbd7q.cloudfront.net/1527c31a-089c-40e0-a14d-11e3711c9133/Intersection1.format_png.resize_200x.png" width={65} height={65} alt="logotype" style={{ borderRadius: 0, width: '65px', height: '65px', maxWidth: '120px' }} />
-                    </td>
-                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 10px' }}>
-                        <span style={{ color: '#0b5394' }} size={4}><b>{props.name}</b></span>
+                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 13px' }}>
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.name}</span>
                         <br />
-                        <span style={{ color: '#444444', fontSize: '12px' }}>{props.role}</span><br /><br />
-
+                        {signatureSecondLine}
+                        <br />
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.phone} | <a style={{ color: "#15c" }} href="https://calendly.com/firstfactory" target="_blank" rel="noreferrer">Book some time</a></span>
                     </td>
                 </tr>
                 </tbody>

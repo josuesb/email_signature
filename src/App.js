@@ -127,15 +127,6 @@ class App extends Component {
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-
-
-
-
-
-
-
-
-
           <br></br>
           <Row className="">
             <Col><Card cardName="No website URL" cardId="copy1" innerContentIndex={0} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
@@ -145,7 +136,7 @@ class App extends Component {
             <Col><Card cardName="Phone number and website" cardId="copy3" innerContentIndex={2} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
             <Col><Card cardName="Simple" cardId="copy4" innerContentIndex={3} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
           </Row>
-          {/**ADDED TO TEST SCROLL - START */}
+          {/**ADDED TO TEST SCROLL - START *
           <Row className="pt-4">
             <Col><Card cardName="Phone number and website" cardId="copy3" innerContentIndex={2} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
             <Col><Card cardName="Simple" cardId="copy4" innerContentIndex={3} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
