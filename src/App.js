@@ -85,9 +85,6 @@ class App extends Component {
         <Navbar></Navbar>
         <Container className="pt-3">
           <h1 className="text-center">Email Signature formater</h1>
-          {/*}
-          <AlertDismissible></AlertDismissible>
-    {*/}
           <Accordion > {/*defaultActiveKey="0"*/}
             <Accordion.Item eventKey="0">
               <Accordion.Header>Showing email signatures for&nbsp;<b>{this.state.name}, {this.state.role}</b>. Open this section to change the configuration</Accordion.Header>
@@ -136,23 +133,6 @@ class App extends Component {
             <Col><Card cardName={<span><b>3.</b> Simple text signature</span>} cardId="copy3" innerContentIndex={2} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
             <Col><Card cardName={<span><b>4.</b> Complete text signature</span>} cardId="copy4" innerContentIndex={3} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
           </Row>
-          {/**ADDED TO TEST SCROLL - START *
-          <Row className="pt-4">
-            <Col><Card cardName="Phone number and website" cardId="copy3" innerContentIndex={2} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
-            <Col><Card cardName="Simple" cardId="copy4" innerContentIndex={3} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
-          </Row>
-
-          <Row className="pt-4">
-            <Col><Card cardName="Phone number and website" cardId="copy3" innerContentIndex={2} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
-            <Col><Card cardName="Simple" cardId="copy4" innerContentIndex={3} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
-          </Row>
-
-          <Row className="pt-4">
-            <Col><Card cardName="Phone number and website" cardId="copy3" innerContentIndex={2} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
-            <Col><Card cardName="Simple" cardId="copy4" innerContentIndex={3} name={this.state.name} role={this.state.role} phone={this.state.phone} url={this.state.url}></Card></Col>
-          </Row>
-
-          {/**ADDED TO TEST SCROLL - END */}
         </Container>
         <br></br>
       </div>

@@ -109,13 +109,8 @@ export default class CardComponent extends Component {
                     <Button className={styles.floatButtonRight} variant="primary" onClick={this.copy.bind(this.e, this.props.cardId)}>Copy this signature</Button>
                 </Card.Header>
                 <Card.Body>
-                    {/*<Card.Title>Special title treatment</Card.Title>
-                    <Card.Text>
-                        sdfsdf
-                    </Card.Text>*/}
                     <div className={styles.cardBodyContainter}>
                         <div className="copyContainer" id={this.props.cardId}>
-                            {/*this.signatureTemplate.bind(this.props.innerContentIndex)*/}
                             <SignatureTemplate index={this.props.innerContentIndex} name={this.props.name} role={this.props.role} phone={this.props.phone} url={this.props.url}></SignatureTemplate>
                         </div>
                     </div>
