@@ -8,15 +8,16 @@ function SignatureTemplate(props) {
         case 0:
             return <table>
                 <tbody><tr>
-                    <td style={{ borderRight: '2px solid rgba(69,102,142,0.5)', paddingRight: '10px' }}>
-                        <img src="https://d36urhup7zbd7q.cloudfront.net/1527c31a-089c-40e0-a14d-11e3711c9133/Intersection1.format_png.resize_200x.png" width={65} height={65} alt="logotype" style={{ borderRadius: 0, width: '65px', height: '65px', maxWidth: '120px' }} />
+                    <td style={{ borderRight: '1px solid rgb(185,185,185)', paddingRight: '13px', paddingLeft: '4px' }}>
+                        <img src="https://firstfactory-assets.s3.amazonaws.com/FF_Logo_50px-03.png" width={55} height={55} alt="logotype" style={{ borderRadius: 0, width: '55px', height: '55px' }} />
                     </td>
-                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 10px' }}>
-                        <span style={{ color: '#0b5394' }} size={4}><b>{props.name}</b></span>
+                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 13px' }}>
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.name}</span>
                         <br />
-                        <span style={{ color: '#444444', fontSize: '12px' }}>{props.role}</span><br /><br />
-                        <a href={"tel:" + props.phone} style={{ fontFamily: 'Arial' }} target="_blank" rel="noreferrer">
-                            <span style={{ color: '#444444', fontSize: '12px' }}>{props.phone}</span></a>
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.role}, <a style={{ color: "#15c" }} href="https://firstfactory.com/" target="_blank">First Factory, Inc.</a></span>
+                        <br />
+                        <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.phone} | <a style={{ color: "#15c" }} href="https://calendly.com/firstfactory" target="_blank">Book some time</a></span>
+
                     </td>
                 </tr>
                 </tbody>
