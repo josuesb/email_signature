@@ -42,7 +42,8 @@ function SignatureTemplate(props) {
         case 2:
             return <table>
                 <tbody><tr>
-                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 13px' }}>
+                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 0px' }}>
+                        --<br></br>
                         <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.name}</span>
                         <br />
                         <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.role}, <a style={{ color: "#15c" }} href="https://firstfactory.com/" target="_blank" rel="noreferrer">First Factory, Inc.</a></span>
@@ -61,7 +62,8 @@ function SignatureTemplate(props) {
 
             return <table>
                 <tbody><tr>
-                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 13px' }}>
+                    <td style={{ fontFamily: 'Arial', textAlign: 'initial', fontStretch: 'normal', lineHeight: 'normal', padding: '0px 0px' }}>
+                        --<br></br>
                         <span style={{ color: '#000000', fontSize: '13px', fontWeight: "400", lineHeight: "20px" }}>{props.name}</span>
                         <br />
                         {signatureSecondLine}
