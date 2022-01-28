@@ -35,7 +35,7 @@ class App extends Component {
       name: 'John Smith',
       role: 'Developer',
       phone: '(+506) 8888-8888',
-      url: 'josuesb.com',
+      url: 'https://firstfactory.com/',
       showAlert: true
     }
 
@@ -43,7 +43,6 @@ class App extends Component {
     this.updateName = this.updateName.bind(this)
     this.updateRole = this.updateRole.bind(this)
     this.updatePhone = this.updatePhone.bind(this)
-    this.updateURL = this.updateURL.bind(this)
   }
 
 
@@ -67,14 +66,6 @@ class App extends Component {
     // Changing state
     this.setState({
       phone:
-        e.target.value
-    })
-  }
-
-  updateURL(e) {
-    // Changing state
-    this.setState({
-      url:
         e.target.value
     })
   }
@@ -109,15 +100,6 @@ class App extends Component {
                     </Form.Group>
                     <Form.Text id="passwordHelpBlock" muted>
                       Phone numbers must be added in an international format.
-                    </Form.Text>
-                  </Col>
-                  <Col>
-                    <Form.Group className="mb-3" controlId="phone">
-                      <Form.Label>Website</Form.Label>
-                      <Form.Control type="text" placeholder="Enter your website URL" onChange={this.updateURL} />
-                    </Form.Group>
-                    <Form.Text id="passwordHelpBlock" muted>
-                      Please include the full URL of your website, including protocols like https.
                     </Form.Text>
                   </Col>
                 </Row>
