@@ -1,4 +1,3 @@
-//import React, { Component, useState } from 'react'
 import React, { Component } from 'react'
 //Custom components
 import Navbar from "./components/Navbar/Navbar"
@@ -9,22 +8,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Accordion from 'react-bootstrap/Accordion'
-//import Alert from 'react-bootstrap/Alert'
-/*
-function AlertDismissible() {
-  const [show, setShow] = useState(true);
-
-  if (show) {
-    return (
-      <Alert key={"idx"} variant={"info"} onClose={() => setShow(false)} dismissible>
-        Wondering how to setup your email signature? Please refer to this{' '}
-        <Alert.Link href="#">quick guide</Alert.Link> and <Alert.Link href="#">reach out if you have any questions</Alert.Link>.
-      </Alert>
-    );
-  }
-  return <></>;
-}*/
-
 
 class App extends Component {
   constructor(props) {
